@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Journey Dashboard — Christopher Manjengwa</title>
+<meta name="description" content="Live Learning Journey Management dashboard and 30-Day Strategic Plan presentation.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============================= COVER ============================= -->
+<section id="screen-cover" class="screen active cover-screen">
+  <canvas id="cover-canvas" class="cover-canvas"></canvas>
+  <div class="cover-content">
+    <div class="cover-eyebrow reveal">LEARNING JOURNEY MANAGEMENT</div>
+    <h1 class="cover-title reveal">Learning Journey<br>Dashboard</h1>
+    <p class="cover-subtitle reveal">Service delivery visibility &amp; the 30-Day Strategic Plan — September 2026</p>
+    <div class="cover-presenter reveal">
+      <div class="presenter-line"></div>
+      <span>Presented by <strong>Christopher Manjengwa</strong></span>
+    </div>
+    <button id="btn-begin" class="btn-begin reveal">
+      <span>Begin</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ============================= UPLOAD ============================= -->
+<section id="screen-upload" class="screen upload-screen">
+  <div class="upload-inner">
+    <div class="upload-kicker">STEP 1 OF 1</div>
+    <h2>Load the data source</h2>
+    <p class="upload-hint">Drop in <strong>Daily_Service_Delivery_Dashboard.xlsx</strong> — the Active Projects sheet. Everything on the Dashboard tab is generated from it, live, in your browser. Nothing is uploaded to a server.</p>
+
+    <div class="dropzone" id="up-dropzone">
+      <div class="dropzone-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 4v11m0-11 4 4m-4-4-4 4M5 17.5V19a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="dropzone-text">
+        <strong>Active Projects workbook</strong>
+        <span id="up-status" class="dz-status">Drop the file here, or browse.</span>
+      </div>
+      <input type="file" id="up-file" accept=".xlsx,.xls" hidden>
+      <button class="btn btn-primary">Choose file</button>
+    </div>
+
+    <button id="btn-skip-to-plan" class="link-btn">Skip for now — go straight to the 30-Day Plan &rarr;</button>
+  </div>
+</section>
+
+<!-- ============================= APP SHELL ============================= -->
+<section id="screen-app" class="screen app-screen">
+  <header class="rail">
+    <div class="rail-inner">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="17" cy="17" r="16" stroke="#58D6C9" stroke-width="1.5"/>
+          <path d="M8 20 L14 14 L19 18 L26 10" stroke="#58D6C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="26" cy="10" r="2" fill="#58D6C9"/>
+        </svg>
+        <div class="brand-text">
+          <h1>Learning Journey Dashboard</h1>
+          <p>Christopher Manjengwa &middot; September 2026</p>
+        </div>
+      </div>
+    </div>
+    <nav class="tabs">
+      <button class="tab-btn app-tab-btn active" data-tab="dashboard">Dashboard</button>
+      <button class="tab-btn app-tab-btn" data-tab="plan">30-Day Plan</button>
+    </nav>
+  </header>
+
+  <!-- ---- Dashboard tab ---- -->
+  <main class="page app-view active" id="app-dashboard">
+    <div class="needs-data empty-state">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" style="margin:0 auto;opacity:.35"><path d="M4 19V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14M4 19l4-6 4 4 4-8 4 4M4 19h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3>No data loaded yet</h3>
+      <p>Go back and drop in the Active Projects workbook to populate this tab.</p>
+    </div>
+
+    <div class="data-content" style="display:none;">
+      <div class="section-heading"><h2>Executive Overview</h2></div>
+      <div class="kpi-grid" id="sd-kpis"></div>
+      <div class="rag-strip" id="sd-rag-strip"></div>
+      <div class="card findings-card"><h3>Key Findings</h3><div id="sd-findings" class="findings-text"></div></div>
+
+      <div class="section-heading"><h2>Programme &amp; Delivery Mix</h2></div>
+      <div class="chart-grid">
+        <div class="card"><h3>Projects &amp; learners by programme type</h3><div class="chart-wrap"><canvas id="sd-programme-chart"></canvas></div></div>
+        <div class="card"><h3>Class training status</h3><div class="chart-wrap"><canvas id="sd-status-chart"></canvas></div></div>
+      </div>
+
+      <div class="section-heading"><h2>Risk Trackers</h2><span class="hint">computed from Active Projects dates &amp; status</span></div>
+      <div class="risk-strip" id="sd-risk-strip"></div>
+
+      <div class="section-heading"><h2>Active Projects</h2></div>
+      <div class="filter-bar">
+        <input type="search" id="sd-search" placeholder="Search PL#, client, programme, coordinator…">
+        <select id="sd-filter-type"></select>
+        <select id="sd-filter-status">
+          <option value="">All journey stages</option>
+          <option value="training">Training</option>
+          <option value="workplace">Workplace</option>
+          <option value="closed">Complete</option>
+        </select>
+      </div>
+      <div id="sd-table"></div>
+
+      <div class="section-heading"><h2>Open Risk Flags</h2></div>
+      <div class="filter-bar">
+        <select id="sd-risk-filter-area"></select>
+        <select id="sd-risk-filter-class">
+          <option value="">All classifications</option>
+          <option>High</option><option>Medium</option><option>Low</option>
+        </select>
+      </div>
+      <div id="sd-risk-table"></div>
+    </div>
+  </main>
+
+  <!-- ---- 30-Day Plan tab ---- -->
+  <main class="page app-view" id="app-plan">
+    <div class="plan-subtabs">
+      <button class="plan-subtab-btn active" data-sub="overview">Plan Overview</button>
+      <button class="plan-subtab-btn" data-sub="execution">Execution Tracker</button>
+    </div>
+
+    <div class="plan-subview active" id="plan-sub-overview">
+      <div class="plan-layout">
+        <nav class="plan-nav" id="plan-nav"></nav>
+        <div class="plan-panel enter" id="plan-panel"></div>
+      </div>
+    </div>
+
+    <div class="plan-subview" id="plan-sub-execution">
+      <div class="section-heading"><h2>30-Day Plan Status</h2><span class="hint">recalculated live against today's date</span></div>
+      <div class="kpi-grid" id="pe-kpis"></div>
+
+      <div class="section-heading"><h2>Progress by Strategic Priority</h2></div>
+      <div class="chart-grid">
+        <div class="card"><h3>Average completion per priority</h3><div class="priority-list" id="pe-priority-list"></div></div>
+        <div class="card"><h3>Actions by status</h3><div class="chart-wrap"><canvas id="pe-status-chart"></canvas></div></div>
+      </div>
+
+      <div class="section-heading"><h2>Action Tracker</h2></div>
+      <div class="filter-bar">
+        <input type="search" id="pe-search" placeholder="Search action, owner, deliverable…">
+        <select id="pe-filter-priority"></select>
+        <select id="pe-filter-rag">
+          <option value="">All RAG</option>
+          <option value="green">Green</option><option value="amber">Amber</option><option value="red">Red</option>
+        </select>
+      </div>
+      <div id="pe-table"></div>
+    </div>
+  </main>
+
+  <button id="btn-end" class="btn-end">End Presentation</button>
+</section>
+
+<!-- ============================= END COVER ============================= -->
+<section id="screen-end" class="screen end-screen">
+  <canvas id="end-canvas" class="cover-canvas"></canvas>
+  <div class="cover-content">
+    <div class="cover-eyebrow reveal">THANK YOU</div>
+    <h1 class="cover-title reveal">That's the<br>Learning Journey.</h1>
+    <p class="cover-subtitle reveal">Questions, thoughts, or a deeper look at any project — happy to dig in.</p>
+    <div class="cover-presenter reveal">
+      <div class="presenter-line"></div>
+      <span>Christopher Manjengwa</span>
+    </div>
+    <button id="btn-restart" class="link-btn reveal" style="color:rgba(255,255,255,.55)">&#8634; Restart presentation</button>
+  </div>
+</section>
+
+<script src="js/vendor/xlsx.full.min.js"></script>
+<script src="js/vendor/chart.umd.js"></script>
+<script src="js/data/plan-content.js"></script>
+<script src="js/data/september-actions.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/riskEngine.js"></script>
+<script src="js/coverCanvas.js"></script>
+<script src="js/parseServiceDelivery.js"></script>
+<script src="js/planPresentation.js"></script>
+<script src="js/planExecution.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
