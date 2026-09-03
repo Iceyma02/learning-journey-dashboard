@@ -937,3 +937,58 @@ footer.site-footer {
   .plan-panel { padding: 22px 20px; }
   .endstate-list { columns: 1; }
 }
+
+/* ==========================================================================
+   Execution Tracker — interactive controls
+   ========================================================================== */
+
+.pe-progress-controls { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.btn-chip {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.btn-chip:hover { background: var(--surface-2); }
+.btn-chip-danger { color: var(--red); border-color: #F3D3D3; }
+.btn-chip-danger:hover { background: var(--red-soft); }
+
+.pe-hint { font-size: 12px; color: var(--muted-soft); margin: -6px 0 14px; }
+
+.status-select {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 5px 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  background: var(--surface);
+  color: var(--ink);
+}
+.status-select.status-green { border-color: var(--green); color: var(--green); background: var(--green-soft); }
+.status-select.status-amber { border-color: var(--amber); color: var(--amber); background: var(--amber-soft); }
+.status-select.status-red { border-color: var(--red); color: var(--red); background: var(--red-soft); }
+.status-select.status-grey { border-color: var(--line); color: var(--muted); }
+
+.priority-row { position: relative; }
+.p-mark-btn {
+  margin-top: 8px;
+  background: none;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.p-mark-btn:hover:not(:disabled) { background: var(--accent-soft); color: var(--accent-dark); border-color: var(--accent); border-style: solid; }
+.p-mark-btn:disabled { color: var(--green); border-color: var(--green); border-style: solid; cursor: default; opacity: 0.8; }
