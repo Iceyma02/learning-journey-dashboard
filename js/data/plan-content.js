@@ -1,237 +1,285 @@
 /* ==========================================================================
-   Static content extracted from the 30-Day Strategic Plan
-   (Learning Journey Management, 1-30 September 2026).
+   Static content extracted from the 30-Day Strategic Plan.
+   Source: "30_PLan_Reviewed.docx" — Learnership Training Delivery,
+   Academic Performance & Campus Operations (reviewed version, replaces
+   the earlier Learning Journey Management draft).
    This is fixed presentation content — not derived from any upload.
    ========================================================================== */
 
 const PLAN_META = {
   title: '30-Day Strategic Plan',
-  subtitle: 'Learning Journey Management',
+  subtitle: 'Learnership Training Delivery, Academic Performance & Campus Operations',
   period: '1 – 30 September 2026',
-  role: 'Learning Journey Manager',
-  focus: 'Stabilisation, Performance Visibility, Quality Assurance, Workplace Integration and Continuous Improvement',
+  role: 'Learning Journey Manager / Campus Manager',
+  scope: 'All Active Learnership Training Projects',
 };
 
 const PLAN_PURPOSE = {
   paragraphs: [
-    'The purpose of this 30-day strategic plan is to establish a disciplined, measurable and proactive Learning Journey Management rhythm across all active learnership projects.',
-    'The September focus is not to introduce excessive administration, but to ensure clear visibility of training delivery, learner progression, workplace integration, stipends, facilitator performance, Workplace Coordinator performance, learner/client feedback and operational risks.',
-    'The month will also be used to finalise the Workplace Strategy and its supporting standard templates, creating a consistent operating framework for workplace coordination across projects.',
+    'The purpose of this 30-day strategic plan is to strengthen the full learnership training delivery value chain by establishing tighter controls over academic delivery, learner progression, facilitator performance, campus readiness, workplace integration, stipends, project performance and continuous improvement.',
   ],
-  principle: ['Plan', 'Monitor', 'Identify Gaps', 'Intervene', 'Measure Impact', 'Report', 'Improve'],
+  ensureList: [
+    'Properly planned and scheduled', 'Academically ready for delivery', 'Operationally and logistically prepared',
+    'Properly resourced', 'Delivered according to the approved curriculum and schedule', 'Continuously monitored',
+    'Supported through early intervention', 'Supported by effective facilitators and workplace coordinators',
+    'Measured through learner and stakeholder feedback', 'Standardised through repeatable processes, templates and controls',
+  ],
+  ensureIntro: 'The plan is designed to ensure that every active learnership project is:',
 };
 
-const PLAN_ROADMAP = [
-  { period: '1–4 Sep', theme: 'Establish Control', focus: 'Baseline current projects, delivery, learners, workplace, stipends and people performance' },
-  { period: '7–11 Sep', theme: 'Drive Performance', focus: 'Training delivery, learner progression, facilitator performance and project risks' },
-  { period: '14–18 Sep', theme: 'Strengthen Workplace & Feedback', focus: 'Workplace Coordinator performance, stipends, surveys and gap analysis' },
-  { period: '21–25 Sep', theme: 'Standardise & Improve', focus: 'Finalise Workplace Strategy, templates and corrective actions' },
-  { period: '28–30 Sep', theme: 'Consolidate & Report', focus: 'Evaluate September performance and establish October priorities' },
+const PLAN_OBJECTIVES = [
+  'Establish a single view of all active learnership projects and their delivery status.',
+  'Ensure curriculum, learning materials and assessments are ready before scheduled delivery.',
+  'Establish a campus readiness control system for every training session.',
+  'Strengthen project monitoring, risk identification and escalation.',
+  'Identify and intervene with learners who are academically, behaviourally or operationally at risk.',
+  'Strengthen stipend data accuracy, exception management and accountability.',
+  'Introduce structured facilitator performance monitoring.',
+  'Introduce structured Workplace Coordinator performance monitoring.',
+  'Convert learner feedback into measurable corrective actions.',
+  'Finalise and standardise the workplace strategy and supporting templates.',
 ];
 
-const PLAN_OUTCOMES = [
-  ['Project visibility', 'Current performance status for every active project'],
-  ['Training delivery control', 'Training delivery monitored against approved schedules'],
-  ['Learner risk management', 'At-risk learners identified with interventions'],
-  ['Assessment visibility', 'Assessment and progression gaps clearly identified'],
-  ['Stipend control', 'Stipend exceptions identified and escalated before submission'],
-  ['Facilitator accountability', 'Facilitator performance measured against agreed KPIs'],
-  ['Workplace Coordinator accountability', 'Coordinator performance measured consistently'],
-  ['Survey intelligence', 'Feedback consolidated, analysed and converted into actions'],
-  ['Workplace governance', 'Workplace Strategy finalised and approved'],
-  ['Standardisation', 'Core workplace templates finalised and implemented'],
-  ['Management reporting', 'Consistent weekly LJM performance dashboard established'],
+const PLAN_ROADMAP = [
+  {
+    period: 'Days 1–5', theme: 'Diagnose & Establish Control', focus: '"Know where we are."',
+    actions: [
+      'Consolidate all active projects', 'Establish master project tracker', 'Assess academic progress',
+      'Review training schedules', 'Identify upcoming training sessions', 'Conduct campus readiness assessment',
+      'Review facilitator allocation', 'Review Workplace Coordinator allocation', 'Identify at-risk learners',
+      'Review stipend exceptions', 'Review outstanding assessments', 'Identify Red/Amber projects', 'Establish baseline KPIs',
+    ],
+    deliverables: ['Master Project Dashboard', 'Academic Status Report', 'Campus Readiness Report', 'Facilitator Allocation Matrix', 'Learner At-Risk Register', 'Stipend Exception Register', 'Project Risk Register'],
+  },
+  {
+    period: 'Days 6–10', theme: 'Plan & Close Immediate Gaps', focus: '"Fix what is preventing effective delivery."',
+    actions: [
+      'Close urgent curriculum gaps', 'Confirm learning materials', 'Confirm assessment plans', 'Confirm venue bookings',
+      'Confirm classroom resources', 'Resolve LMS access issues', 'Confirm facilitator readiness',
+      'Address learner attendance concerns', 'Address urgent stipend exceptions', 'Review workplace placement gaps',
+    ],
+    deliverables: ['Academic Readiness Checklist', 'Campus Readiness Checklist', 'Assessment Calendar', 'Learner Intervention Register', 'Stipend Exception Action Plan', 'Workplace Placement Gap Report'],
+  },
+  {
+    period: 'Days 11–15', theme: 'Implement & Monitor', focus: '"Strengthen execution."',
+    actions: [
+      'Monitor live training sessions', 'Conduct facilitator observations', 'Review curriculum coverage',
+      'Monitor learner attendance', 'Track assessments', 'Conduct learner check-ins', 'Monitor workplace integration',
+      'Review Workplace Coordinator performance', 'Analyse survey results', 'Implement corrective actions',
+    ],
+    deliverables: ['Facilitator Observation Reports', 'Learner Progress Report', 'Assessment Progress Dashboard', 'Workplace Progress Report', 'Survey Analysis Report'],
+  },
+  {
+    period: 'Days 16–20', theme: 'Intervene & Improve', focus: '"Close performance gaps."',
+    actions: [
+      'Conduct formal reviews of Red/Amber projects', 'Implement academic recovery plans', 'Conduct remedial learner interventions',
+      'Address poor facilitator performance', 'Address Workplace Coordinator performance gaps',
+      'Resolve outstanding campus/logistical issues', 'Follow up stipend exceptions', 'Conduct root-cause analysis on recurring problems',
+    ],
+    deliverables: ['Recovery Plans', 'Academic Intervention Report', 'Facilitator Improvement Plans', 'Workplace Coordinator Improvement Plans', 'Corrective Action Register'],
+  },
+  {
+    period: 'Days 21–25', theme: 'Standardise', focus: '"Build repeatable systems."',
+    actions: [
+      'Finalise standard operating procedures', 'Finalise academic readiness checklist', 'Finalise campus readiness checklist',
+      'Finalise facilitator scorecard', 'Finalise Workplace Coordinator scorecard', 'Finalise workplace templates',
+      'Standardise project reporting', 'Standardise survey analysis', 'Standardise learner intervention process',
+    ],
+    deliverables: ['Academic SOP', 'Campus Readiness SOP', 'Facilitator Scorecard', 'Workplace Coordinator Scorecard', 'Workplace Toolkit', 'Learner Intervention Framework'],
+  },
+  {
+    period: 'Days 26–30', theme: 'Review, Report & Embed', focus: '"Measure impact and prepare for the next cycle."',
+    actions: [
+      'Conduct full 30-day performance review', 'Compare baseline against actual performance', 'Review all Red/Amber projects',
+      'Review learner progression', 'Review facilitator performance', 'Review workplace performance', 'Review stipend performance',
+      'Review survey trends', 'Confirm outstanding corrective actions', 'Present management dashboard', 'Develop October action plan',
+    ],
+    deliverables: [
+      '30-Day Academic & Operations Performance Report', 'Executive Project Dashboard', 'Learner Progression Dashboard',
+      'Facilitator Performance Dashboard', 'Workplace Coordinator Dashboard', 'Stipend Exception Report',
+      'Survey & Gap Closure Report', 'Workplace Strategy & Toolkit', 'Risk & Corrective Action Register', 'October 30-Day Action Plan',
+    ],
+  },
 ];
 
 const PLAN_PRIORITIES = [
   {
-    n: 1, title: 'Learnership Training Delivery',
-    key: '1. Training Delivery',
-    objective: 'Ensure that all active learnership projects are being delivered according to approved schedules, learner requirements and project commitments.',
-    context: [],
-    actions: [
-      ['Review all active project training schedules', '1–3 Sep', 'Consolidated delivery view'],
-      ['Compare planned vs actual training delivery', '3–5 Sep', 'Delivery variance report'],
-      ['Identify missed, delayed or at-risk sessions', 'Weekly', 'Delivery risk register'],
-      ['Monitor attendance and learner participation', 'Weekly', 'Attendance exceptions'],
-      ['Review learner progression against programme milestones', 'Weekly', 'Learner progression dashboard'],
-      ['Escalate material delivery risks', 'Within 24 hours', 'Corrective action'],
-      ['Review September delivery performance', '28–30 Sep', 'Monthly delivery assessment'],
+    n: 1, title: 'Learnership Training Delivery Management',
+    objective: 'Establish effective end-to-end control over all active learnership training delivery.',
+    activities: [
+      { label: 'Days 1–5', items: [
+        'Develop a master register of all active learnership projects, capturing project number, client, qualification, NQF level, number of learners, start/end dates, training schedule, facilitator, Workplace Coordinator, workplace placement status, current academic phase, assessment status and overall project status.',
+        'Identify projects that are on track, delayed or at risk.',
+      ]},
+      { label: 'Days 6–15', items: [
+        'Compare planned training days against actual training days.',
+        'Identify missed, postponed or incomplete sessions.',
+        'Establish recovery plans for delayed projects.',
+        'Verify that attendance, curriculum coverage and session records are captured.',
+      ]},
+      { label: 'Days 16–25', items: ['Conduct weekly delivery reviews with relevant coordinators.', 'Track recovery plans.', 'Escalate projects with material delays.'] },
+      { label: 'Days 26–30', items: ['Produce a consolidated monthly delivery report.', 'Establish the September baseline for October monitoring.'] },
     ],
-    outcome: '100% of active projects have a current view of planned delivery, actual delivery and identified delivery risks.',
+    kpis: ['≥95% scheduled sessions delivered.', '100% active projects reflected on master tracker.', '100% delayed projects have documented recovery plans.', '100% training sessions have attendance and delivery evidence.'],
   },
   {
-    n: 2, title: 'Project Monitoring, Evaluation and Risk Management',
-    key: '2. Project Monitoring',
-    objective: 'Move project monitoring from reporting activity to management of performance, risks and outcomes.',
-    context: ['Training delivery', 'Attendance', 'Learner progression', 'Assessment', 'Workplace', 'Stipends', 'Compliance', 'Client/stakeholder engagement', 'Key risks'],
-    contextLabel: 'Each active project should be assessed across',
-    ragLegend: { green: 'On track', amber: 'Intervention required', red: 'Material risk requiring escalation' },
-    actions: [
-      ['Establish September project baseline', '1–5 Sep', ''],
-      ['Implement project health dashboard', 'By 5 Sep', ''],
-      ['Weekly project status review', 'Every Friday', ''],
-      ['Identify top 5 project risks', 'Weekly', ''],
-      ['Track corrective actions', 'Weekly', ''],
-      ['Escalate RED projects', 'Within 24 hours', ''],
-      ['Complete September project evaluation', '28–30 Sep', ''],
-    ],
-    outcome: null,
+    n: 2, title: 'Academic Planning, Curriculum Alignment & Assessment Readiness',
+    objective: 'Ensure that training is academically ready, curriculum-aligned and assessment-driven.',
+    activities: [{ label: 'Key Activities', items: [
+      'Map each active project against the approved curriculum.',
+      'Confirm modules/topics already completed and identify outstanding curriculum areas.',
+      'Review facilitator lesson plans and preparation.',
+      'Confirm learning material availability and that assessment instruments are available before delivery.',
+      'Establish an assessment calendar for each project.',
+      'Track assessments: Planned, Conducted, Marked, Moderated, Competent, Not Yet Competent, Re-assessment required.',
+      'Identify academic gaps requiring remedial intervention and conduct academic quality checks.',
+    ]}],
+    flow: { label: 'Key Control — no training session should commence without confirming', chain: ['Curriculum', 'Facilitator', 'Material', 'Venue', 'Learners', 'Assessment', 'Evidence'] },
+    kpis: ['100% curriculum mapping completed.', '100% upcoming sessions academically prepared.', '≥95% assessments completed according to schedule.', '100% identified academic gaps have intervention plans.', 'Assessment turnaround monitored weekly.'],
   },
   {
-    n: 3, title: 'Learner Progression and Intervention',
-    key: '3. Learner Progression',
-    objective: 'Ensure that learner risks are identified early rather than after learners have already fallen significantly behind.',
-    context: ['Attendance', 'Participation', 'Learning Activities', 'Submissions', 'Assessment', 'Competence', 'Workplace'],
-    contextLabel: 'Learners should be monitored through',
-    flow: true,
-    actions: [
-      ['Establish weekly learner-risk reporting', 'Weekly from 2 Sep', ''],
-      ['Identify learners with repeated absenteeism', 'Weekly from 2 Sep', ''],
-      ['Monitor late or outstanding submissions', 'Weekly from 2 Sep', ''],
-      ['Track assessment backlogs', 'Weekly from 2 Sep', ''],
-      ['Identify learners requiring remediation', 'Weekly from 2 Sep', ''],
-      ['Monitor workplace integration risks', 'Weekly from 2 Sep', ''],
-      ['Assign an owner to every RED learner intervention', 'Weekly from 2 Sep', ''],
-      ['Track intervention effectiveness', 'Weekly from 2 Sep', ''],
+    n: 3, title: 'Campus Readiness, Venue Preparedness & Training Logistics',
+    objective: 'Ensure that the campus is operationally ready before every training session.',
+    checklist: {
+      intro: 'Develop a Pre-Session Campus Readiness Checklist covering:',
+      groups: [
+        { label: 'Venue', items: ['Room allocated', 'Room capacity', 'Seating arrangement', 'Cleanliness', 'Lighting', 'Ventilation', 'Accessibility', 'Safety requirements'] },
+        { label: 'Equipment', items: ['Computers/laptops', 'Projectors/screens', 'Internet', 'Power', 'Printers', 'Extension leads', 'Audio/visual equipment'] },
+        { label: 'Learner Access', items: ['LMS access', 'Training material access', 'User credentials', 'Communication of venue and timetable', 'Transport/logistical considerations'] },
+        { label: 'Administration', items: ['Attendance register', 'Session register', 'Assessment documentation', 'Learner files', 'Sign-in controls'] },
+      ],
+    },
+    activities: [
+      { label: 'Days 1–10', items: ['Create and implement the checklist.'] },
+      { label: 'Days 11–20', items: ['Test the checklist across active projects.'] },
+      { label: 'Days 21–30', items: ['Standardise and implement as a mandatory pre-session control.'] },
     ],
-    outcome: '100% of identified high-risk learners have a documented intervention or escalation plan.',
+    kpis: ['100% of scheduled sessions confirmed "campus ready" before commencement.'],
   },
   {
-    n: 4, title: 'Stipend Monitoring and Control',
-    key: '4. Stipends',
-    objective: 'Strengthen stipend administration by identifying exceptions before they become payroll problems.',
-    context: ['Learner Registration', 'Attendance', 'Active Status', 'Workplace Status', 'Stipend Eligibility', 'Payroll'],
-    contextLabel: 'The LJM should monitor the relationship between',
-    flow: true,
-    actions: [
-      ['Reconcile active learner master data', '1–4 Sep', ''],
-      ['Identify stipend exceptions', 'First week', ''],
-      ['Reconcile attendance against stipend eligibility', 'Weekly', ''],
-      ['Track withdrawals/transfers/terminations', 'Weekly', ''],
-      ['Escalate unresolved exceptions', 'Within 24 hours', ''],
-      ['Complete pre-payroll verification', 'According to payroll cut-off', ''],
-      ['Review recurring stipend issues', '28–30 Sep', ''],
-    ],
-    outcome: 'A Stipend Exception Register is maintained and reviewed weekly.',
+    n: 4, title: 'Project Monitoring, Evaluation & Risk Management',
+    objective: 'Create proactive visibility of project performance and risks.',
+    healthDashboard: {
+      intro: 'Develop a Project Health Dashboard using:',
+      legend: [['Green', 'On Track'], ['Amber', 'Requires Attention'], ['Red', 'Immediate Intervention']],
+    },
+    track: ['Training delivery', 'Attendance', 'Curriculum progress', 'Assessment progress', 'Learner retention', 'Learner competency', 'Workplace placement', 'Workplace attendance', 'Facilitator performance', 'Workplace Coordinator performance', 'Stipends', 'Client issues', 'Compliance', 'Operational risks'],
+    trackLabel: 'Track',
+    weeklyReview: { label: 'Weekly Risk Review — for every Amber/Red project, identify', items: ['Risk', 'Root cause', 'Impact', 'Owner', 'Corrective action', 'Due date', 'Escalation requirement', 'Current status'] },
+    kpis: ['100% Red/Amber risks assigned to an owner.', '100% critical risks escalated within agreed timelines.', 'Weekly project health review completed.'],
   },
   {
-    n: 5, title: 'Facilitator Performance Management',
-    key: '5. Facilitators',
-    objective: 'Create visibility of Facilitator performance beyond whether training sessions were delivered.',
-    context: ['Preparation', 'Punctuality', 'Curriculum coverage', 'Learner engagement', 'Attendance management', 'Learner progression', 'LMS compliance', 'Assessment readiness', 'Reporting', 'Learner/client feedback'],
-    contextLabel: 'Performance should consider',
-    actions: [
-      ['Confirm Facilitator allocation by project', '1–4 Sep', ''],
-      ['Communicate performance expectations/KPIs', 'By 7 Sep', ''],
-      ['Implement Facilitator performance scorecard', 'By 11 Sep', ''],
-      ['Monitor delivery and learner feedback', 'Weekly', ''],
-      ['Identify performance gaps', 'From 11 Sep', ''],
-      ['Conduct targeted performance discussions', '21–25 Sep', ''],
-      ['Complete September performance review', '28–30 Sep', ''],
+    n: 5, title: 'Learner Progression & Intervention',
+    objective: 'Ensure that learner problems are identified early and addressed before they affect completion.',
+    riskCategories: [
+      { label: 'Academic', items: ['Poor assessment results', 'Repeated NYC', 'Missed assessments', 'Falling behind curriculum'] },
+      { label: 'Attendance', items: ['Absenteeism', 'Late-coming', 'Unexplained absence', 'Repeated absence'] },
+      { label: 'Behavioural', items: ['Poor conduct', 'Classroom disruption', 'Non-compliance'] },
+      { label: 'Operational', items: ['LMS access', 'Transport', 'Documentation', 'Workplace placement'] },
     ],
-    outcome: 'Facilitators categorised as: High Performing | Performing | Development Required | Critical Intervention.',
+    levels: [
+      { title: 'Level 1 – Early Warning', items: ['Informal intervention', 'Coaching', 'Reminder', 'Academic support'] },
+      { title: 'Level 2 – Formal Intervention', items: ['Individual meeting', 'Written intervention plan', 'Parent/guardian or relevant stakeholder engagement where applicable'] },
+      { title: 'Level 3 – Escalation', items: ['Formal case management', 'Management escalation', 'Possible disciplinary/termination process in accordance with policy'] },
+    ],
+    kpis: ['100% at-risk learners identified.', '100% high-risk learners have intervention plans.', 'Weekly monitoring of intervention outcomes.'],
   },
   {
-    n: 6, title: 'Workplace Coordinator Performance', 
-    key: '6. Workplace Coordinators',
-    objective: 'Strengthen Workplace Coordination from an administrative placement function into a measurable learner-outcome and host-engagement function.',
-    context: ['Workplace placement', 'Host engagement', 'Learner workplace attendance', 'Supervisor engagement', 'Workplace evidence', 'Workplace visits/check-ins', 'Learner support', 'Issue resolution', 'Reporting', 'Escalation'],
-    contextLabel: 'Performance areas',
-    actions: [
-      ['Confirm coordinator portfolios', '1–4 Sep', ''],
-      ['Establish individual KPIs', 'By 7 Sep', ''],
-      ['Review current workplace portfolio', '7–11 Sep', ''],
-      ['Implement Coordinator scorecard', 'By 11 Sep', ''],
-      ['Conduct weekly workplace performance review', 'Weekly', ''],
-      ['Identify host/learner risks', 'Weekly', ''],
-      ['Conduct individual performance discussions', '21–25 Sep', ''],
-      ['Complete monthly performance assessment', '28–30 Sep', ''],
-    ],
-    outcome: null,
+    n: 6, title: 'Stipend Monitoring & Control',
+    objective: 'Improve the accuracy, timeliness and accountability of learner stipend administration.',
+    track: ['Eligible learners', 'Attendance compliance', 'Supporting documentation', 'Stipend submission status', 'Approved learners', 'Exceptions', 'Rejected submissions', 'Missing information', 'Payment status', 'Queries', 'Outstanding payments'],
+    trackLabel: 'Track',
+    exceptionReport: { label: 'Introduce — Stipend Exception Report', columns: ['Exception', 'Learner Count', 'Root Cause', 'Owner', 'Due Date', 'Status'], rows: ['Missing attendance', 'Missing documentation', 'Attendance below requirement', 'Banking issue', 'Other'] },
+    kpis: ['≥98% stipend submissions accurate.', '100% exceptions tracked to closure.', 'Stipend-related learner queries monitored weekly.'],
   },
   {
-    n: 7, title: 'Survey Tracking, Analysis and Gap Closure',
-    key: '7. Surveys',
-    objective: 'Use learner, supervisor, workplace and client feedback as a management intelligence tool, rather than simply collecting survey responses.',
-    context: ['Learner VOC surveys', 'Training evaluation surveys', 'Facilitator feedback', 'Workplace supervisor surveys', 'Intern/learner workplace surveys', 'Client feedback', 'Programme impact surveys'],
-    contextLabel: 'Surveys to monitor, where applicable',
-    cycle: ['Collect', 'Consolidate', 'Analyse', 'Identify Gaps', 'Assign Actions', 'Implement', 'Re-measure'],
-    actions: [
-      ['Consolidate all outstanding survey responses', '1–5 Sep', ''],
-      ['Establish survey response dashboard', 'By 5 Sep', ''],
-      ['Analyse recurring themes', '7–11 Sep', ''],
-      ['Identify top performance gaps', 'By 12 Sep', ''],
-      ['Assign corrective actions', '14–18 Sep', ''],
-      ['Track action implementation', 'Weekly', ''],
-      ['Measure whether gaps are improving', '28–30 Sep', ''],
-    ],
-    outcome: 'Produce a Survey Insights & Improvement Report: Top 5 Strengths + Top 5 Gaps + Root Causes + Corrective Actions + Owners + Due Dates.',
+    n: 7, title: 'Facilitator Performance Management',
+    objective: 'Establish consistent academic delivery standards and facilitator accountability.',
+    track: ['Attendance/punctuality', 'Session preparation', 'Curriculum coverage', 'Learner engagement', 'Classroom management', 'Assessment administration', 'Assessment turnaround', 'LMS compliance', 'Learner feedback', 'Academic results', 'Submission of required evidence', 'Professional conduct'],
+    trackLabel: 'Track Each Facilitator On',
+    scorecard: {
+      label: 'Monthly Facilitator Scorecard — suggested weighting',
+      weights: [['Curriculum Delivery', '20%'], ['Preparation & Readiness', '15%'], ['Learner Engagement', '15%'], ['Assessment Management', '15%'], ['Learner Results', '15%'], ['LMS/Administration Compliance', '10%'], ['Learner Feedback', '10%'], ['Total', '100%']],
+      categories: [['90–100%', 'Excellent'], ['80–89%', 'Strong'], ['70–79%', 'Acceptable'], ['60–69%', 'Improvement Required'], ['Below 60%', 'Critical Intervention']],
+    },
+    kpis: ['100% of active facilitators evaluated monthly.'],
   },
   {
-    n: 8, title: 'Finalise Workplace Strategy',
-    key: '8. Workplace Strategy',
-    objective: 'Complete a practical Workplace Strategy that creates a standard operating model for workplace integration across all learnership projects.',
-    context: ['Workplace placement model', 'Host recruitment and onboarding', 'Learner placement process', 'Host responsibilities', 'Supervisor responsibilities', 'Workplace Coordinator responsibilities', 'Learner responsibilities', 'Workplace attendance management', 'Workplace evidence requirements', 'Workplace monitoring and visits', 'Host engagement', 'Learner support', 'Workplace risk management', 'Escalation process', 'Workplace reporting', 'Performance measurement', 'Quality assurance', 'Exit/completion process'],
-    contextLabel: 'Strategy should define',
-    actions: [
-      ['Review and consolidate inputs', '1–18 Sep', ''],
-      ['Final management review', '21–23 Sep', ''],
-      ['Finalise strategy', '24–25 Sep', ''],
-      ['Approval and implementation readiness', 'By 30 Sep', ''],
-    ],
-    outcome: null,
+    n: 8, title: 'Workplace Coordinator Performance Management',
+    objective: 'Strengthen workplace coordination and ensure learners are effectively supported during workplace integration.',
+    track: ['Workplace placements', 'Placement documentation', 'Employer engagement', 'Learner workplace attendance', 'Workplace visits', 'Mentor/supervisor engagement', 'Learner workplace progress', 'Logbooks/evidence', 'Workplace challenges', 'Issue resolution', 'Reporting compliance'],
+    trackLabel: 'Track',
+    scorecard: {
+      label: 'Workplace Coordinator Scorecard',
+      weights: [['Placement Management', '20%'], ['Employer Engagement', '15%'], ['Learner Support', '20%'], ['Workplace Monitoring', '15%'], ['Documentation & Compliance', '15%'], ['Issue Resolution', '10%'], ['Reporting', '5%'], ['Total', '100%']],
+    },
+    kpis: ['100% learners tracked for workplace placement.', '100% workplace issues recorded and managed.', 'Workplace reports submitted according to schedule.'],
+  },
+  {
+    n: 9, title: 'Survey Tracking, Analysis & Gap Closure',
+    objective: 'Move from simply collecting learner feedback to using feedback as a performance improvement mechanism.',
+    track: ['Learner experience', 'Facilitator feedback', 'Training material feedback', 'Campus experience', 'Workplace experience', 'Client feedback', 'Exit/impact surveys'],
+    trackLabel: 'Surveys to Track',
+    analyseAgainst: ['Facilitator', 'Project', 'Module', 'Campus', 'Cohort', 'Training period'],
+    flow: { label: 'Gap Closure Process', chain: ['Feedback', 'Analysis', 'Root Cause', 'Action', 'Owner', 'Deadline', 'Verification'] },
+    example: 'Learners report insufficient practical activities → identify affected module → engage facilitator → introduce practical activities → monitor next survey → confirm improvement.',
+    kpis: ['100% surveys analysed.', '100% material gaps assigned to owners.', '≥90% corrective actions closed within agreed timeframe.'],
+  },
+  {
+    n: 10, title: 'Workplace Strategy & Standardisation',
+    objective: 'Develop a consistent workplace integration model that can be applied across all learnership projects.',
+    standardise: ['Workplace placement process', 'Employer engagement process', 'Workplace readiness checklist', 'Learner workplace onboarding', 'Workplace Coordinator responsibilities', 'Employer/mentor responsibilities', 'Workplace visit process', 'Learner workplace attendance tracking', 'Workplace evidence/logbook tracking', 'Escalation process', 'Workplace feedback', 'Learner workplace performance reporting'],
+    templates: ['Workplace Placement Tracker', 'Employer Engagement Register', 'Workplace Readiness Checklist', 'Learner Workplace Onboarding Form', 'Workplace Visit Report', 'Workplace Attendance Tracker', 'Workplace Issue/Escalation Register', 'Employer Feedback Form', 'Workplace Coordinator Weekly Report', 'Learner Workplace Progress Report'],
+    kpis: ['100% workplace processes documented and standardised by Day 30.'],
   },
 ];
 
-const PLAN_TEMPLATES = [
-  ['Workplace Placement Register', '11 Sep'], ['Host Organisation Register', '11 Sep'],
-  ['Workplace Coordinator Dashboard', '11 Sep'], ['Learner Workplace Attendance Tracker', '11 Sep'],
-  ['Workplace Supervisor Engagement Record', '18 Sep'], ['Workplace Visit/Check-in Template', '18 Sep'],
-  ['Learner Workplace Progress Report', '18 Sep'], ['Workplace Risk & Escalation Register', '18 Sep'],
-  ['Workplace Issue Resolution Tracker', '18 Sep'], ['Host Feedback Survey', '18 Sep'],
-  ['Workplace Completion Checklist', '18 Sep'], ['Monthly Workplace Coordination Report', '18 Sep'],
-];
-
-const PLAN_RHYTHM = [
-  ['Monday', 'Project priorities, learner risks and training delivery'],
-  ['Tuesday', 'Facilitator delivery and learner progression'],
-  ['Wednesday', 'Workplace coordination and host engagement'],
-  ['Thursday', 'Assessments, stipends, surveys and compliance'],
-  ['Friday', 'Performance review, risks, escalations and management reporting'],
-];
-
-const PLAN_KPIS = [
-  ['Active projects with current status', '100%'],
-  ['Projects reviewed weekly', '100%'],
-  ['High-risk learner interventions', '100%'],
-  ['Training delivery monitored', '100%'],
-  ['Stipend exceptions identified before submission', '100%'],
-  ['Facilitators with performance tracking', '100%'],
-  ['Workplace Coordinators with performance tracking', '100%'],
-  ['Workplace placement status visibility', '100%'],
-  ['Survey responses consolidated', '100%'],
-  ['Identified survey gaps with action plans', '100%'],
-  ['Workplace Strategy completed', '100%'],
-  ['Core workplace templates completed', '100%'],
-  ['Critical risks escalated within agreed timeframe', '100%'],
-];
-
-const PLAN_ROLE = {
-  statement: 'The September plan positions the Learning Journey Manager as the integrator of the entire learner journey, rather than the administrator of individual activities.',
-  chain: ['Training Delivery', 'Learner Engagement', 'Assessment & Competence', 'Workplace Integration', 'Learner/Host Feedback', 'Performance & Gap Analysis', 'Corrective Action', 'Improved Learner Outcomes'],
-  oldQuestion: '"Have we completed the activity?"',
-  newQuestion: '"What outcome did the activity produce, what gap remains, who owns the gap, and by when will it be resolved?"',
+const PLAN_WEEKLY_REVIEW = {
+  intro: 'A weekly Academic & Operations Review should follow the same structure every week:',
+  sections: [
+    { label: 'A. Delivery', items: ['What was planned?', 'What was delivered?', 'What was missed?', 'What requires recovery?'] },
+    { label: 'B. Academics', items: ['Curriculum coverage', 'Assessment completion', 'Competency', 'Academic risks'] },
+    { label: 'C. Learners', items: ['Attendance', 'Retention', 'At-risk learners', 'Interventions'] },
+    { label: 'D. People', items: ['Facilitator performance', 'Workplace Coordinator performance'] },
+    { label: 'E. Operations', items: ['Venue', 'Equipment', 'LMS', 'Training materials', 'Logistics'] },
+    { label: 'F. Workplace', items: ['Placements', 'Workplace attendance', 'Workplace evidence', 'Employer issues'] },
+    { label: 'G. Finance/Administration', items: ['Stipends', 'Exceptions', 'Outstanding documentation'] },
+    { label: 'H. Feedback', items: ['VOC', 'Survey results', 'Complaints', 'Corrective actions'] },
+    { label: 'I. Risk', items: ['Top 5 risks', 'Owners', 'Due dates', 'Escalations'] },
+  ],
 };
 
-const PLAN_ENDSTATE = {
-  intro: 'By 30 September 2026, a single, high-level management system should provide reliable visibility of:',
-  items: [
-    'every active learnership project', 'training delivery performance', 'learner progression and risk',
-    'assessment status', 'workplace integration', 'stipend exceptions', 'Facilitator performance',
-    'Workplace Coordinator performance', 'survey insights and improvement actions',
-    'workplace strategy and standard templates', 'critical operational and compliance risks',
+const PLAN_EXEC_DASHBOARD = {
+  intro: 'The following should be visible to management every week. Actual, RAG and Trend are completed by the team each week — targets below are fixed for the 30-day period.',
+  rows: [
+    ['Training Delivery', '≥95%'], ['Curriculum Coverage', '100%'], ['Learner Attendance', '≥90%'], ['Learner Retention', '≥95%'],
+    ['Learners At Risk', '<10%'], ['Assessment Completion', '≥95%'], ['Competency Rate', '≥85%'], ['Facilitator Performance', '≥80%'],
+    ['Workplace Placement', '100%'], ['Workplace Monitoring', '≥95%'], ['Stipend Accuracy', '≥98%'], ['Survey Action Closure', '≥90%'], ['Academic Compliance', '100%'],
   ],
-  closing: 'The strategic objective is to leave September with greater control, clearer accountability, faster escalation and better evidence for management decision-making.',
-  cycle: ['Visibility', 'Accountability', 'Intervention', 'Measurement', 'Improvement'],
+};
+
+const PLAN_GOVERNANCE = [
+  { cadence: 'Daily', label: 'Campus/Learning Journey Team', items: ['Attendance', 'Session readiness', 'Learner issues', 'Facilitator issues', 'Operational issues'] },
+  { cadence: 'Weekly', label: 'Academic & Operations Review', items: ['Project performance', 'Learner progression', 'Academic performance', 'Facilitator performance', 'Workplace performance', 'Risks', 'Corrective actions'] },
+  { cadence: 'Monthly', label: 'Management Performance Review', items: ['Overall portfolio performance', 'KPI achievement', 'Project risks', 'Financial/stipend issues', 'Quality/compliance', 'Client feedback', 'Improvement priorities'] },
+];
+
+const PLAN_SUCCESS_MEASURES = {
+  intro: 'By the end of the 30-day period, the campus should have:',
+  items: [
+    ['Control', 'A single, accurate view of all active learnership projects.'],
+    ['Academic Readiness', 'Training materials, curriculum plans and assessments prepared ahead of delivery.'],
+    ['Campus Readiness', 'A standard process ensuring every classroom and training session is ready before commencement.'],
+    ['Learner Control', 'A formal mechanism identifying and intervening with learners at risk.'],
+    ['People Accountability', 'Measurable performance scorecards for facilitators and Workplace Coordinators.'],
+    ['Financial Control', 'Improved stipend accuracy and visibility of exceptions.'],
+    ['Feedback Loop', 'A functioning process that converts survey findings into corrective action.'],
+    ['Workplace Integration', 'A standard workplace strategy, supported by common templates and reporting mechanisms.'],
+    ['Management Visibility', 'A concise weekly dashboard showing what is on track, what is at risk, why it is at risk and what action is being taken.'],
+  ],
+};
+
+const PLAN_CORE_PRINCIPLE = {
+  chain: ['Plan', 'Prepare', 'Deliver', 'Monitor', 'Intervene', 'Measure', 'Improve', 'Standardise'],
+  closing: 'The objective is not simply to ensure that training takes place. The objective is to ensure that every learner, facilitator, project and workplace placement moves progressively toward successful programme completion and workplace competence.',
 };
