@@ -148,7 +148,16 @@
         <div class="card"><h3>Actions by status</h3><div class="chart-wrap"><canvas id="pe-status-chart"></canvas></div></div>
       </div>
 
-      <div class="section-heading"><h2>Action Tracker</h2></div>
+      <div class="section-heading">
+        <h2>Action Tracker</h2>
+        <div class="pe-progress-controls">
+          <button id="pe-export" class="btn-chip" title="Download your progress as a JSON file">Export progress</button>
+          <button id="pe-import-btn" class="btn-chip" title="Load a previously exported progress file">Import progress</button>
+          <input type="file" id="pe-import-file" accept=".json" hidden>
+          <button id="pe-reset" class="btn-chip btn-chip-danger" title="Clear all tracked progress">Reset progress</button>
+        </div>
+      </div>
+      <p class="pe-hint">Set each action's status below — everything above (KPIs, priority progress, RAG) updates automatically. Progress is saved in this browser; use Export before switching devices.</p>
       <div class="filter-bar">
         <input type="search" id="pe-search" placeholder="Search action, owner, deliverable…">
         <select id="pe-filter-priority"></select>
